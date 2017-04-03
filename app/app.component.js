@@ -41,7 +41,11 @@ System.register(['angular2/core', './events/event-list.component', './events/eve
                         template: "\n        <div>\n            <h1>{{pageTitle}}</h1>\n            <el-events></el-events>\n        </div>\n        ",
                         directives: [event_list_component_1.EventListComponent],
                         providers: [event_service_1.EventService, http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS]
-                    }), 
+                    }),
+                    router_1.RouteConfig([
+                        { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true },
+                        { path: '/events', name: 'Events', component: event_list_component_1.EventListComponent }
+                    ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
