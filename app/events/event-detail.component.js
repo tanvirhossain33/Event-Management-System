@@ -22,17 +22,21 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
             }],
         execute: function() {
             EventDetailComponent = (function () {
-                function EventDetailComponent(_routeParams) {
+                function EventDetailComponent(_routeParams, _router) {
                     this._routeParams = _routeParams;
+                    this._router = _router;
                     this.pageTitle = 'Event Detail';
                     var id = this._routeParams.get('id');
                     this.pageTitle += ": " + id;
                 }
+                EventDetailComponent.prototype.onBack = function () {
+                    this._router.navigate(['Events']);
+                };
                 EventDetailComponent = __decorate([
                     core_1.Component({
                         templateUrl: 'app/events/event-detail.component.html'
                     }), 
-                    __metadata('design:paramtypes', [router_1.RouteParams])
+                    __metadata('design:paramtypes', [router_1.RouteParams, router_1.Router])
                 ], EventDetailComponent);
                 return EventDetailComponent;
             }());
