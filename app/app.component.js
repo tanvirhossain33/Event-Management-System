@@ -1,4 +1,4 @@
-System.register(['angular2/core', './events/event-list.component', './events/event.service', 'angular2/http', 'rxjs/Rx', 'angular2/router', './home/welcome.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './events/event-list.component', './events/event.service', 'angular2/http', 'rxjs/Rx', 'angular2/router', './home/welcome.component', './events/event-detail.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './events/event-list.component', './events/eve
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, event_list_component_1, event_service_1, http_1, router_1, welcome_component_1;
+    var core_1, event_list_component_1, event_service_1, http_1, router_1, welcome_component_1, event_detail_component_1;
     var AppComponent;
     return {
         setters:[
@@ -32,6 +32,9 @@ System.register(['angular2/core', './events/event-list.component', './events/eve
             },
             function (welcome_component_1_1) {
                 welcome_component_1 = welcome_component_1_1;
+            },
+            function (event_detail_component_1_1) {
+                event_detail_component_1 = event_detail_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -47,7 +50,8 @@ System.register(['angular2/core', './events/event-list.component', './events/eve
                     }),
                     router_1.RouteConfig([
                         { path: '/welcome', name: 'Welcome', component: welcome_component_1.WelcomeComponent, useAsDefault: true },
-                        { path: '/events', name: 'Events', component: event_list_component_1.EventListComponent }
+                        { path: '/events', name: 'Events', component: event_list_component_1.EventListComponent },
+                        { path: '/event/:id', name: 'EventDetail', component: event_detail_component_1.EventDetailComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

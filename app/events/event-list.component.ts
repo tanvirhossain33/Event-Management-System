@@ -3,13 +3,14 @@ import {IEvent} from './event';
 import {EventFilterPipe} from './event-filter.pipe';
 import {ThumbComponent} from '../shared/thumb.component';
 import {EventService} from './event.service';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 
 @Component ({
     templateUrl: 'app/events/event-list.component.html',
     styleUrls: ['app/events/event-list.component.css'],
     pipes: [EventFilterPipe],
-    directives: [ThumbComponent]
+    directives: [ThumbComponent, ROUTER_DIRECTIVES]
 })
 export class EventListComponent implements OnInit{
     pageTitle: string = ' + Event List + ';

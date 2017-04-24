@@ -1,4 +1,4 @@
-System.register(['angular2/core', './event-filter.pipe', '../shared/thumb.component', './event.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './event-filter.pipe', '../shared/thumb.component', './event.service', 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './event-filter.pipe', '../shared/thumb.compon
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, event_filter_pipe_1, thumb_component_1, event_service_1;
+    var core_1, event_filter_pipe_1, thumb_component_1, event_service_1, router_1;
     var EventListComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/core', './event-filter.pipe', '../shared/thumb.compon
             },
             function (event_service_1_1) {
                 event_service_1 = event_service_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             EventListComponent = (function () {
@@ -51,7 +54,7 @@ System.register(['angular2/core', './event-filter.pipe', '../shared/thumb.compon
                         templateUrl: 'app/events/event-list.component.html',
                         styleUrls: ['app/events/event-list.component.css'],
                         pipes: [event_filter_pipe_1.EventFilterPipe],
-                        directives: [thumb_component_1.ThumbComponent]
+                        directives: [thumb_component_1.ThumbComponent, router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [event_service_1.EventService])
                 ], EventListComponent);
